@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "DOM",
+      "ES2015"
+    ],
+    "strictNullChecks": true,
+    "strict": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "experimentalDecorators": true,
+    "target": "ES5"
+  }
+}
