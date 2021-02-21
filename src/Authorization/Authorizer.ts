@@ -16,7 +16,7 @@ export class Authorizer implements TokenGenerator, TokenValidator {
   private sessionTokenDBAccess: SessionTokenDBAccess 
     = new SessionTokenDBAccess();
 
-  // @logInvocation
+  @logInvocation
   async generateToken(account: Account): Promise<SessionToken | undefined> {
     const resultAccount = await this.userCredDBAccess.getUserCredential(
       account.username, account.password
@@ -64,8 +64,8 @@ export class Authorizer implements TokenGenerator, TokenValidator {
   }
 
   private generateExpirationTime() {
-    // return new Date(Date.now());
-    return new Date(Date.now() + 60 * 60 * 1000);
+    return new Date(Date.now());
+    // return new Date(Date.now() + 60 * 60 * 1000);
   }
 
   private generateRandomTokenId() {
