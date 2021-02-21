@@ -64,8 +64,8 @@ export class Authorizer implements TokenGenerator, TokenValidator {
   }
 
   private generateExpirationTime() {
-    return new Date(Date.now());
-    // return new Date(Date.now() + 60 * 60 * 1000);
+    //return new Date(Date.now());
+    return new Date(Date.now() + 60 * 60 * 1000);
   }
 
   private generateRandomTokenId() {
